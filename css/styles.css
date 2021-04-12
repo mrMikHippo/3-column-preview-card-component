@@ -46,6 +46,10 @@ h1, h2, h3, h4 {
   color: var(--light-background);
 }
 
+a {
+  text-decoration: none;
+}
+
 section {
   flex-grow: 1;
   color: var(--paragraphs);
@@ -57,7 +61,7 @@ section {
 }
 
 .card img {
-  width: 3em;
+  width: 4em;
 }
 
 .title {
@@ -69,18 +73,38 @@ section {
   border-radius: 7px 7px 0 0;
 }
 
+.card:first-child .btn {
+  color: var(--bright-orange);
+}
+
 .card:nth-child(2) {
   background: var(--dark-cyan);
 }
 
+.card:nth-child(2) .btn {
+  color: var(--dark-cyan);
+}
 .card:last-child {
   background: var(--very-dark-cyan);
   border-radius: 0 0 7px 7px;
 }
 
+.card:last-child .btn {
+  color: var(--very-dark-cyan);
+}
+
+.btn {
+  background: var(--light-background);
+  padding: .8em 1.8em;
+  border-radius: 40px;
+  display: inline-block;
+  margin: 2em 0 1em 0;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: gray;
 }
 
 .attribution a {
@@ -95,6 +119,10 @@ section {
     flex-grow: 0;
     display: flex;
     justify-content: center;
+  }
+
+  .btn {
+    margin-top: 5em;
   }
 
   .card:first-child {
