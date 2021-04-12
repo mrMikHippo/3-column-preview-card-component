@@ -1,0 +1,95 @@
+:root {
+  /* Primary */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral */
+  --paragraphs: hsla(0, 0%, 100%, 0.6);
+  --light-background: hsl(0, 0%, 95%);
+
+  /* Typography */
+  --font-size: 15px;
+  --font-family: "Lexend Deca";
+  --font-weight: 400;
+  --font-family-heading: "Big Shoulders Display";
+  --font-weight-heading: 700;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap'); */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 2em;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  line-height: 1.7;
+  background-color: var(--light-background);
+  min-height: 100vh;
+  background: orange;
+
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-heading);
+  text-transform: uppercase;
+  color: var(--light-background);
+}
+
+section {
+  /* width: 60%; */
+  /* align-self: center; */
+  /* flex-grow: 1; */
+  color: var(--paragraphs);
+
+  /* display: flex; */
+}
+
+img {
+  width: 3em;
+}
+
+.card {
+  padding: 2.5em;
+}
+
+.card:first-child {
+  border-radius: 7px 7px 0 0;
+}
+
+.card:last-child {
+  border-radius: 0 0 7px 7px;
+}
+
+.title {
+  font-size: 2.2em;
+}
+
+.card:first-child {
+  background: var(--bright-orange);
+}
+
+.card:nth-child(2) {
+  background: var(--dark-cyan);
+}
+
+.card:last-child {
+  background: var(--very-dark-cyan);
+}
+
+.attribution {
+  /* align-self: flex-end; */
+}
