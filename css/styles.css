@@ -84,6 +84,7 @@ section {
 .card:nth-child(2) .btn {
   color: var(--dark-cyan);
 }
+
 .card:last-child {
   background: var(--very-dark-cyan);
   border-radius: 0 0 7px 7px;
@@ -93,12 +94,22 @@ section {
   color: var(--very-dark-cyan);
 }
 
+.card:first-child .btn:hover, .card:nth-child(2) .btn:hover, .card:last-child .btn:hover {
+  color: var(--light-background);
+}
+
 .btn {
   background: var(--light-background);
   padding: .8em 1.8em;
+  border: 2px solid var(--light-background);
   border-radius: 40px;
   display: inline-block;
   margin: 2em 0 1em 0;
+}
+
+.btn:hover {
+  background: none;
+  border: 2px solid var(--light-background);
 }
 
 .attribution {
