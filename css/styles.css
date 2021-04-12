@@ -3,11 +3,9 @@
   --bright-orange: hsl(31, 77%, 52%);
   --dark-cyan: hsl(184, 100%, 22%);
   --very-dark-cyan: hsl(179, 100%, 13%);
-
   /* Neutral */
   --paragraphs: hsla(0, 0%, 100%, 0.6);
   --light-background: hsl(0, 0%, 95%);
-
   /* Typography */
   --font-size: 15px;
   --font-family: "Lexend Deca";
@@ -17,7 +15,6 @@
 }
 
 /* @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap'); */
-
 html {
   box-sizing: border-box;
 }
@@ -35,11 +32,11 @@ body {
   line-height: 1.7;
   background-color: var(--light-background);
   min-height: 100vh;
-  background: orange;
+
 
   display: flex;
-  /* flex-direction: column; */
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
 }
 
 h1, h2, h3, h4 {
@@ -52,9 +49,8 @@ h1, h2, h3, h4 {
 section {
   /* width: 60%; */
   /* align-self: center; */
-  /* flex-grow: 1; */
+  flex-grow: 1;
   color: var(--paragraphs);
-
   /* display: flex; */
 }
 
@@ -91,5 +87,33 @@ img {
 }
 
 .attribution {
-  /* align-self: flex-end; */
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    justify-content: center;
+  }
+  section {
+    flex-grow: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    width: 300px;
+  }
+
+  .card:first-child {
+    border-radius: 7px 0 0 7px;
+  }
+
+  .card:last-child {
+    border-radius: 0 7px 7px 0;
+  }
 }
