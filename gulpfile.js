@@ -1,6 +1,7 @@
-const { series, src, dest } = require("gulp");
-const postcss = require('gulp-postcss');
-const rename = require('gulp-rename');
+const { series, src, dest } = require("gulp"),
+  postcss = require('gulp-postcss'),
+  rename = require('gulp-rename'),
+  inject = require('gulp-inject');
 
 const paths = {
   src: 'src/',
@@ -28,11 +29,13 @@ function clean(cb) {
 
 function html() {
   return src(paths.src + '*.html')
+  .pipe(inject(src(paths.src + '*.html'), {relative: true, starttag: '<!-- inject:index:{{ext}} -->'}))
     .pipe(dest(paths.dev));
 }
 
 function production_html() {
   return src(paths.src + '*.html')
+    .pipe(inject(src(paths.src + '*.html'), {relative: true, starttag: '<!-- inject:index:{{ext}} -->'}))
     .pipe(dest(paths.prod));
 }
 
