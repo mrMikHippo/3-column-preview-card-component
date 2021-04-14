@@ -6,6 +6,8 @@
   "scripts": {
     "build": "node node_modules/gulp/bin/gulp.js build",
     "dev": "node node_modules/gulp/bin/gulp.js",
+    "clean": "node node_modules/gulp/bin/gulp.js clean",
+    "tasks": "node node_modules/gulp/bin/gulp.js --tasks",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,6 +16,7 @@
     "autoprefixer": "^10.2.5",
     "cssnano": "^5.0.0",
     "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-htmlclean": "^2.7.22",
     "gulp-inject": "^5.0.5",
