@@ -4,6 +4,8 @@
   "description": "![Design preview for the 3-column preview card component coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
+    "build": "node node_modules/gulp/bin/gulp.js build",
+    "dev": "node node_modules/gulp/bin/gulp.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
