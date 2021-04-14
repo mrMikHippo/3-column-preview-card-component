@@ -51,7 +51,16 @@ function production_html() {
     .pipe(dest(paths.prod));
 }
 
-exports.build = series(prod_clean, production_css, production_html);
-exports.default = series(clean, css, html);
+function images() {
+  return src(paths.src + 'images/*')
+    .pipe(dest(paths.dev + 'images/'));
+}
+
+function prod_images() {
+  return src(paths.src + 'images/*')
+    .pipe(dest(paths.prod + 'images/'));
+}
+
+exports.build = series(prod_clean, production_css, production_html, prod_images);
+exports.default = series(clean, css, html, images);
 exports.clean = clean;
-// exports.default = series(clean, build);
